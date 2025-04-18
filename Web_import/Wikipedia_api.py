@@ -13,3 +13,5 @@ json_data = r.json()
 # Print the Wikipedia page extract
 pizza_extract = json_data['query']['pages']['24768']['extract']
 print (pizza_extract)
+
+
