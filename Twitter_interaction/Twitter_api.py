@@ -10,19 +10,6 @@ access_token_secret = "X4dHmhPfaksHcQ7SCbmZa2oYBBVSD2g8uIHXsp5CTaksx"
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 
-# Create your Stream object with credentials
-class MyStreamListener(tweepy.StreamListener):
-    def on_status(self, status):
-        print(status.text)
-
-    def on_error(self, status_code):
-        if status_code == 420:
-            # Disconnect the stream in case of rate limiting
-            return False
-
-# Initialize the stream listener
-listener = MyStreamListener()
-stream = tweepy.Stream(auth=auth, listener=listener)
 
 # Filter your Stream variable
 stream.filter(track=['clinton', 'trump', 'sanders', 'cruz'])
