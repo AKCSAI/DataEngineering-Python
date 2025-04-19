@@ -8,3 +8,4 @@ for index, row in df.iterrows():
     trump += word_in_text('trump', row['text'])
     sanders += word_in_text('sanders', row['text'])
     cruz += word_in_text('cruz', row['text'])
+    
